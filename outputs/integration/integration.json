@@ -1,0 +1,102 @@
+{
+  "description": "Cross-objective associations computed from the CSV outputs of objectives 2, 3 and 4-5 (descriptive; n = 40 categories).",
+  "spearman": [
+    {
+      "x": "largest_intra_component_fraction",
+      "y": "inter_share_of_incident_edges",
+      "rho": -0.856848030018762,
+      "p_permutation": 0.0,
+      "n": 40,
+      "permutations": 10000
+    },
+    {
+      "x": "largest_intra_component_fraction",
+      "y": "num_papers",
+      "rho": 0.7444652908067543,
+      "p_permutation": 0.0,
+      "n": 40,
+      "permutations": 10000
+    },
+    {
+      "x": "largest_intra_component_fraction",
+      "y": "nnf",
+      "rho": 0.1851782363977486,
+      "p_permutation": 0.2539,
+      "n": 40,
+      "permutations": 10000
+    },
+    {
+      "x": "largest_intra_component_fraction",
+      "y": "year_mean",
+      "rho": 0.11653765274888642,
+      "p_permutation": 0.4854,
+      "n": 40,
+      "permutations": 10000
+    },
+    {
+      "x": "inter_share_of_incident_edges",
+      "y": "num_papers",
+      "rho": -0.6480300187617262,
+      "p_permutation": 0.0,
+      "n": 40,
+      "permutations": 10000
+    },
+    {
+      "x": "cliffs_delta",
+      "y": "inter_share_of_incident_edges",
+      "rho": 0.036210131332082555,
+      "p_permutation": 0.8226,
+      "n": 40,
+      "permutations": 10000
+    },
+    {
+      "x": "cliffs_delta",
+      "y": "num_papers",
+      "rho": 0.20469043151969987,
+      "p_permutation": 0.2042,
+      "n": 40,
+      "permutations": 10000
+    },
+    {
+      "x": "mean_inter",
+      "y": "nnf",
+      "rho": 0.18499061913696063,
+      "p_permutation": 0.2502,
+      "n": 40,
+      "permutations": 10000
+    },
+    {
+      "x": "bridge_frac_inter",
+      "y": "largest_intra_component_fraction",
+      "rho": -0.6313320825515948,
+      "p_permutation": 0.0,
+      "n": 40,
+      "permutations": 10000
+    }
+  ],
+  "partial_spearman": {
+    "cohesion_vs_inter_share_given_num_papers": -0.7363062276314912,
+    "cohesion_vs_num_papers_given_inter_share": 0.48184084466203775
+  },
+  "provenance": {
+    "generated_at": "2026-11-06T19:08:02+00:00",
+    "mo438_f2_version": "0.1.0",
+    "git_commit": "a121016cc7f8430b312acc663f96531b14cedef0",
+    "git_dirty": true,
+    "command": "/Users/_souzaiarley/Vscode/MO438/mo438-f1/.venv/bin/mo438-f2 integrate",
+    "environment": {
+      "python": "3.12.13",
+      "platform": "macOS-27.0.1-arm64-arm-64bit",
+      "mo438-f1": "0.1.0",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": "3.1.1",
+      "python-igraph": "1.0.0",
+      "networkx": "3.7",
+      "matplotlib": "3.11.2",
+      "PyYAML": "6.0.3",
+      "leidenalg": "0.12.0",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}

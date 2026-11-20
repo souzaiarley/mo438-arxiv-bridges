@@ -1,0 +1,227 @@
+{
+  "description": "Objective 6: Leiden communities of G_d (directed modularity, Leicht-Newman) vs the 40 primary categories.",
+  "algorithm": {
+    "implementation": "leidenalg.ModularityVertexPartition on a directed igraph graph",
+    "n_iterations": -1,
+    "seeds": [
+      1178105249,
+      2146304851,
+      1975063843,
+      1053733479,
+      945498947,
+      584428345,
+      230559045,
+      155051205,
+      1107927632,
+      1877081405
+    ],
+    "seed_derivation": "SeedSequence([438, 6]).generate_state(n) % (2^31 - 1)"
+  },
+  "quality_function": "Q_d = (1/m) sum_c [m_c - K_c^out K_c^in / m]",
+  "category_partition": {
+    "modularity_directed_independent": 0.49470231477290877,
+    "modularity_leidenalg": 0.49470231477290877,
+    "modularity_igraph_directed": 0.49470231477290894,
+    "modularity_undirected_reading": 0.4946223107948148,
+    "num_communities": 40,
+    "arcs_inside_communities": 0.655083031580897,
+    "inter_area_arcs_inside_communities": 0.0,
+    "intra_area_arcs_inside_communities": 1.0,
+    "inside_community_arcs_that_are_inter_area": 0.0
+  },
+  "runs_summary": {
+    "modularity_directed": {
+      "mean": 0.7123868744401166,
+      "std": 0.004156025837178036,
+      "min": 0.7019217487049841,
+      "max": 0.7160249748864869
+    },
+    "modularity_leidenalg": {
+      "mean": 0.7123868744401158,
+      "std": 0.004156025837178352,
+      "min": 0.7019217487049828,
+      "max": 0.7160249748864868
+    },
+    "abs_diff_implementations": {
+      "mean": 7.993605777301127e-16,
+      "std": 4.704458624755238e-16,
+      "min": 1.1102230246251565e-16,
+      "max": 1.5543122344752192e-15
+    },
+    "modularity_undirected_reading": {
+      "mean": 0.7121444524399888,
+      "std": 0.004137722824469001,
+      "min": 0.7017154102417206,
+      "max": 0.7158080026361926
+    },
+    "num_communities": {
+      "mean": 192.1,
+      "std": 11.93919781410981,
+      "min": 179.0,
+      "max": 215.0
+    },
+    "largest": {
+      "mean": 17535.2,
+      "std": 1687.3395759136465,
+      "min": 14630.0,
+      "max": 20685.0
+    },
+    "largest_fraction": {
+      "mean": 0.10354841947999031,
+      "std": 0.009964034981745017,
+      "min": 0.08639270592820489,
+      "max": 0.12214853876451935
+    },
+    "communities_ge_100": {
+      "mean": 36.3,
+      "std": 1.8287822299126937,
+      "min": 33.0,
+      "max": 39.0
+    },
+    "communities_ge_1000": {
+      "mean": 24.5,
+      "std": 0.8498365855987975,
+      "min": 23.0,
+      "max": 26.0
+    },
+    "nodes_in_communities_ge_1000": {
+      "mean": 0.9623338431467495,
+      "std": 0.0033158702568152087,
+      "min": 0.956709164240624,
+      "max": 0.9661515385932693
+    },
+    "singletons": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "median_size": {
+      "mean": 13.0,
+      "std": 1.5634719199411433,
+      "min": 11.0,
+      "max": 15.0
+    },
+    "nmi_vs_categories": {
+      "mean": 0.41073920905179734,
+      "std": 0.00293061887435619,
+      "min": 0.40571207155225497,
+      "max": 0.4151641316376928
+    },
+    "ari_vs_categories": {
+      "mean": 0.2653136611010881,
+      "std": 0.01304985209516123,
+      "min": 0.23696720284066083,
+      "max": 0.2829478625999937
+    },
+    "arcs_inside_communities": {
+      "mean": 0.8005195315213041,
+      "std": 0.009668517606733998,
+      "min": 0.7871970078276997,
+      "max": 0.8182274191570711
+    },
+    "inter_area_arcs_inside_communities": {
+      "mean": 0.7100458164805087,
+      "std": 0.013043566398714953,
+      "min": 0.6919432104351199,
+      "max": 0.730005941475226
+    },
+    "intra_area_arcs_inside_communities": {
+      "mean": 0.848156118044048,
+      "std": 0.011316216744688377,
+      "min": 0.8313136628158108,
+      "max": 0.8646781485524604
+    },
+    "inside_community_arcs_that_are_inter_area": {
+      "mean": 0.3059339151625179,
+      "std": 0.004154805772523926,
+      "min": 0.2991592899428635,
+      "max": 0.31392538413428583
+    },
+    "seconds": {
+      "mean": 425.45,
+      "std": 98.1037461058445,
+      "min": 301.3,
+      "max": 590.6
+    }
+  },
+  "stability_between_runs": {
+    "pairs": 45,
+    "nmi_mean": 0.7713146949623901,
+    "nmi_min": 0.7134124008223026,
+    "ari_mean": 0.6815775754056382,
+    "ari_min": 0.5642236472846301
+  },
+  "reference_run": {
+    "index": 9,
+    "seed": 1877081405,
+    "size_summary": {
+      "num_communities": 191,
+      "largest": 17222,
+      "largest_fraction": 0.1016989187625116,
+      "communities_ge_100": 35,
+      "communities_ge_1000": 24,
+      "nodes_in_communities_ge_1000": 0.9647224863147577,
+      "singletons": 0,
+      "median_size": 15.0,
+      "top10_sizes": [
+        17222,
+        15459,
+        12762,
+        11850,
+        11080,
+        10776,
+        10214,
+        8350,
+        8241,
+        7369
+      ]
+    }
+  },
+  "chance_level_label_permutation": {
+    "replicates": 20,
+    "nmi_mean": 0.004942454616433062,
+    "nmi_max": 0.005036303048308352,
+    "ari_mean": -2.1656234823983244e-05
+  },
+  "timings_seconds": {
+    "leiden_all_runs_wall": 1072.8,
+    "total": 1076.7
+  },
+  "cache": {
+    "memberships": "data/processed/f2/communities_memberships.npz"
+  },
+  "inputs": {
+    "directed_graphml": {
+      "path": "outputs/graphml/ogbn_arxiv_directed.graphml",
+      "sha256": "51ac36337a5dc8adb7d1bfd0dd5c9ca16cf068ee11186dc794f7088d14ca7017"
+    },
+    "undirected_graphml": {
+      "path": "outputs/graphml/ogbn_arxiv_undirected.graphml",
+      "sha256": "f6eb33b80fc9e1e748790f61747965a3e91e1f479b61100c11492a1eb83b19f0"
+    },
+    "reader_version": 1,
+    "cache_file": "data/processed/f2/instances_cf7867ab838bd06e.npz"
+  },
+  "provenance": {
+    "generated_at": "2026-11-06T19:07:32+00:00",
+    "mo438_f2_version": "0.1.0",
+    "git_commit": "a121016cc7f8430b312acc663f96531b14cedef0",
+    "git_dirty": true,
+    "command": "/Users/_souzaiarley/Vscode/MO438/mo438-f1/.venv/bin/mo438-f2 communities",
+    "environment": {
+      "python": "3.12.13",
+      "platform": "macOS-27.0.1-arm64-arm-64bit",
+      "mo438-f1": "0.1.0",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": "3.1.1",
+      "python-igraph": "1.0.0",
+      "networkx": "3.7",
+      "matplotlib": "3.11.2",
+      "PyYAML": "6.0.3",
+      "leidenalg": "0.12.0",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}

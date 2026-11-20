@@ -1,0 +1,4 @@
+class,edges,bridges,bridge_fraction,pendant_bridges,non_pendant_bridges,non_pendant_bridge_fraction,vertices_detachable_total,vertices_detachable_by_non_pendant,detached_size_median_non_pendant,detached_size_max
+inter,400344,10081,0.0251808,8485,1596,0.00398657,13478,4993,2,128
+intra,757455,14143,0.0186717,12119,2024,0.00267211,18267,6148,2,22
+all,1157799,24224,0.0209225,20604,3620,0.00312662,31745,11141,2,128

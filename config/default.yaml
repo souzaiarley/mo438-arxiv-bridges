@@ -1,24 +1,28 @@
-# Full ogbn-arxiv run. Relative paths are resolved from the repository root.
-# MO438_DATA_DIR / MO438_OUTPUT_DIR (env) relocate data/ and outputs/ (e.g. to a scratch FS).
+# Configuration of every `mo438` command (characterization pipeline and analyses).
+# Relative paths are resolved from the current directory: run the commands from the
+# repository root. MO438_DATA_DIR / MO438_OUTPUT_DIR (env) relocate data/ and outputs/
+# (e.g. to a scratch FS).
 project:
-  name: mo438-f1
-  seed: 438
+  name: mo438
+  seed: 438                      # base seed; the experiment seeds are derived from it
 
 data:
   dataset: ogbn-arxiv            # ogbn-arxiv | synthetic
   source_url: http://snap.stanford.edu/ogb/data/nodeproppred/arxiv.zip
   raw_dir: data/raw              # cached arxiv.zip (~83 MB)
-  processed_dir: data/processed  # parsed arrays (.npz) + distance cache
-  graphml_dir: outputs/graphml
+  processed_dir: data/processed  # regenerable caches (git-ignored): parsed arrays, distances,
+                                 # GraphML instances, per-edge and per-vertex tables
+  graphml_dir: outputs/graphml   # published instances (Git LFS), input of every analysis
   directed_graphml: outputs/graphml/ogbn_arxiv_directed.graphml
   undirected_graphml: outputs/graphml/ogbn_arxiv_undirected.graphml
   area_graphml: outputs/graphml/ogbn_arxiv_area_graph.graphml
   remove_self_loops: true        # G_u is a simple graph (self-loops dropped, counted in summary)
 
 outputs:
-  metrics_dir: outputs/metrics
-  figures_dir: outputs/figures
-  logs_dir: outputs/logs
+  dir: outputs                   # versioned results, one subdirectory per objective
+  metrics_dir: outputs/obj1_characterization          # characterization pipeline
+  figures_dir: outputs/obj1_characterization/figures
+  logs_dir: outputs/obj1_characterization             # run.log
 
 metrics:
   undirected:
@@ -56,6 +60,12 @@ plots:
   sample_visualization: true
   sample_size: 1500
   area_graph_top_edges: 80
+
+removal:                         # objectives 4-5 (mo438 removal)
+  replicates: 50                 # seeds per strategy: SeedSequence([seed, strategy_code, r])
+  strategies: [inter, intra, uniform, matched_inter, matched_intra]
+  validate_points: 3             # random grid points per run re-checked from scratch (scipy)
+  feasibility_replicates: 50     # target orders used to assess the variant-B matched control
 
 runtime:
   n_jobs: auto                   # auto = $SLURM_CPUS_PER_TASK or available CPUs

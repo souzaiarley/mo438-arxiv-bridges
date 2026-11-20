@@ -1,0 +1,50 @@
+metric,value,f1_reported,f1_summary_json,kind,method,passed
+num_nodes,169343,169343.0,169343.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+num_edges,1157799,1157799.0,1157799.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+mean_degree,13.674010735607613,13.674,13.674010735607613,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+density,8.074789913670332e-05,8.07479e-05,8.074789913670332e-05,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+average_local_clustering,0.25745357344617203,0.257454,0.25745357344617203,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+average_local_clustering_all_nodes,0.22612914062470948,,0.22612914062470948,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+transitivity,0.01620149151351999,0.016201,0.01620149151351999,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+num_triangles,2233524,,2233524.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+num_connected_triples,413577478,,413577478.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+num_connected_components,1,1.0,1.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+num_nodes_degree_lt_2,20604,20604.0,20604.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+num_isolated_nodes,0,,0.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+degree_max,13161,,13161.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+G_d.num_edges,1166243,,1166243.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+G_d.reciprocity,0.014480687129526179,,0.014480687129526179,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+G_d.in_degree_max,13155,,13155.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+G_d.out_degree_max,436,,436.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+G_d.num_nodes_in_degree_0,62006,,62006.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+G_d.num_nodes_out_degree_0,17440,,17440.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+G_d.density,4.066840277668502e-05,,4.066840277668502e-05,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+G_d.num_weakly_connected_components,1,,1.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+G_d.num_strongly_connected_components,141223,,141223.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+G_d.num_nontrivial_sccs,2810,,2810.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+G_d.num_nodes_in_nontrivial_sccs,30930,,30930.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+G_d.largest_scc_size,23164,,23164.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+conversion.reciprocal_pairs,8444,,8444.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+conversion.self_loops,0,,0.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+conversion.duplicates,0,,0.0,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+local_clustering.csv: degree per node,True,,,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+local_clustering.csv: triangles per node,True,,,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+local_clustering.csv: max |C_i difference| (CSV has 6 significant digits),4.997131382578068e-07,,,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+degree_distribution_undirected.csv,True,,,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+area_citation_matrix.csv,True,,,recomputed_independently,"numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",True
+category names / label order,True,,,recomputed_independently,GraphML vs summary.json,True
+distance_distribution.csv internal consistency,True,,,consistency,"sum = n(n-1), bin 1 = 2m, contiguous bins",True
+average_distance,5.750051843728483,5.750052,5.750051843728483,consistency,mean of the F1 histogram (not recomputed),True
+diameter,25,25.0,25.0,recomputed_independently,"iFUB, 386 scipy BFS, root 12070 (ecc 16), certificate pair (25184, 145643)",True
+average_distance,5.750051843728483,5.750052,5.750051843728483,recomputed_independently,one scipy BFS per node (independent of the F1 MS-BFS engine),True
+distance_distribution.csv equals independent histogram (all bins),True,,,recomputed_independently,one scipy BFS per node (independent of the F1 MS-BFS engine),True
+diameter,25,25.0,25.0,recomputed_independently,one scipy BFS per node (independent of the F1 MS-BFS engine),True
+mean_degree,13.674010735607613,13.674,13.674010735607613,f1_code_rerun,mo438_f1.metrics (igraph) re-run in the uv environment,True
+density,8.074789913670332e-05,8.07479e-05,8.074789913670332e-05,f1_code_rerun,mo438_f1.metrics (igraph) re-run in the uv environment,True
+average_local_clustering,0.25745357344617203,0.257454,0.25745357344617203,f1_code_rerun,mo438_f1.metrics (igraph) re-run in the uv environment,True
+transitivity,0.01620149151351999,0.016201,0.01620149151351999,f1_code_rerun,mo438_f1.metrics (igraph) re-run in the uv environment,True
+num_triangles,2233524,,2233524.0,f1_code_rerun,mo438_f1.metrics (igraph) re-run in the uv environment,True
+num_connected_components,1,1.0,1.0,f1_code_rerun,mo438_f1.metrics (igraph) re-run in the uv environment,True
+G_d.reciprocity,0.014480687129526179,,0.014480687129526179,f1_code_rerun,mo438_f1.metrics (igraph) re-run in the uv environment,True
+G_d.num_strongly_connected_components,141223,,141223.0,f1_code_rerun,mo438_f1.metrics (igraph) re-run in the uv environment,True
+G_d.largest_scc_size,23164,,23164.0,f1_code_rerun,mo438_f1.metrics (igraph) re-run in the uv environment,True

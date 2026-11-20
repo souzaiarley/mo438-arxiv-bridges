@@ -1,0 +1,4 @@
+class,num_edges,pendant_edges,pendant_fraction,min_degree_le_3_fraction,median_min_degree,median_max_degree,mean_log2_min_degree,mean_log2_max_degree,edges_touching_top100_hubs_fraction
+inter,400344,8485,0.0211943,0.0906196,15,84,3.81551,6.79357,0.176178
+intra,757455,12119,0.0159996,0.0734116,17,63,3.96063,6.42827,0.134969
+all,1157799,20604,0.0177958,0.0793618,17,69,3.91045,6.55459,0.149218

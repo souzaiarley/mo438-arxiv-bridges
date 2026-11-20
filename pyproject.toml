@@ -3,35 +3,43 @@ requires = ["setuptools>=69", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "mo438-f1"
-version = "0.1.0"
-description = "Pipeline reprodutível para a entrega F1 do projeto MO438 usando ogbn-arxiv"
+# One package (src/mo438) for the whole project. Outputs produced before version 0.2.0
+# record the former distributions/commands (mo438-f1, mo438-f2) in their provenance.
+name = "mo438"
+version = "0.2.0"
+description = "MO438 (Unicamp) — citações entre áreas e integração estrutural na rede ogbn-arxiv"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.12,<3.13"
 dependencies = [
   "numpy>=1.26",
   "pandas>=2.2",
   "scipy>=1.12",
   "matplotlib>=3.8",
-  "networkx>=3.2",
+  "networkx>=3.2",       # reference implementations in tests
   "python-igraph>=0.11",
   "PyYAML>=6.0",
+  "leidenalg>=0.10",     # objective 6: directed modularity (Leiden)
+  "scikit-learn>=1.4",   # objective 6: NMI and ARI
 ]
 
-[project.optional-dependencies]
-ogb = ["ogb>=1.3.6"]  # optional: not needed, the raw OGB zip is parsed directly
+[dependency-groups]
 dev = ["pytest>=8.0", "ruff>=0.4"]
 
 [project.scripts]
-mo438-f1 = "mo438_f1.cli:main"
+mo438 = "mo438.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "-q"
+# Slow tests (independent all-pairs recomputation, minutes) are opt-in: `pytest -m slow`.
+addopts = "-q -m 'not slow'"
 pythonpath = ["src", "tests"]
+markers = [
+  "slow: long-running independent recomputations (opt-in with -m slow)",
+  "realdata: needs the ogbn-arxiv GraphML instances in outputs/graphml (Git LFS)",
+]
 
 [tool.ruff]
 line-length = 100

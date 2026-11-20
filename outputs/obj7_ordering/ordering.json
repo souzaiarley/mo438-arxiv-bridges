@@ -1,0 +1,186 @@
+{
+  "description": "Objective 7: ordering of the 40 categories maximising the weight of inter-area citations compatible with the order (linear ordering).",
+  "convention": "arc i -> j from the citing area i to the cited area j; compatible iff pos(j) < pos(i) (cited area earlier)",
+  "objective": "F(pi) = sum_{pos(j)<pos(i)} W_ij / sum_{i!=j} W_ij, maximised",
+  "inter_area_weight_total": 402257.0,
+  "heuristic": {
+    "method": "multi-start best-improvement insertion + iterated local search (random 4-insertion kicks)",
+    "observed_budget": {
+      "starts": 5001,
+      "kicks": 50
+    },
+    "starts_reaching_best": 4263,
+    "distinct_local_optima": 22,
+    "seconds": 99.0
+  },
+  "result": {
+    "compatible_fraction": 0.5823267214740825,
+    "order": [
+      "cs.MS",
+      "cs.CC",
+      "cs.DM",
+      "cs.DS",
+      "cs.SC",
+      "cs.NE",
+      "cs.NA",
+      "cs.CL",
+      "cs.IT",
+      "cs.CG",
+      "cs.CV",
+      "cs.AI",
+      "cs.DB",
+      "cs.AR",
+      "cs.GL",
+      "cs.OS",
+      "cs.DL",
+      "cs.CE",
+      "cs.SI",
+      "cs.LO",
+      "cs.CR",
+      "cs.LG",
+      "cs.GT",
+      "cs.DC",
+      "cs.SD",
+      "cs.IR",
+      "cs.PL",
+      "cs.SE",
+      "cs.GR",
+      "cs.OH",
+      "cs.NI",
+      "cs.PF",
+      "cs.MM",
+      "cs.FL",
+      "cs.SY",
+      "cs.RO",
+      "cs.MA",
+      "cs.ET",
+      "cs.CY",
+      "cs.HC"
+    ],
+    "realizability_(F-0.5)/(U-0.5)": 0.9253132902108159
+  },
+  "bounds": {
+    "pairwise_bound": 0.5889717270302319,
+    "cycle_packing_bound": 0.5849891984477585,
+    "guaranteed_loss_fraction": 0.003982528582473394,
+    "dominant_3_cycles": 902,
+    "triples": 9880,
+    "fraction_cyclic_triples": 0.09129554655870445,
+    "packed_cycles": 95
+  },
+  "gap_to_cycle_bound": 0.0026624769736760534,
+  "random_permutations": {
+    "n": 10000,
+    "mean": 0.49987665845466955,
+    "sd": 0.016705401041275523,
+    "max": 0.5540388358686114,
+    "fraction_ge_observed": 0.0,
+    "z": 4.935533293435831
+  },
+  "direction_randomised_null": {
+    "replicates": 500,
+    "budget": {
+      "starts": 51,
+      "kicks": 10
+    },
+    "preserves": [
+      "pair totals T_ij",
+      "pair margins |W_ij - W_ji|",
+      "pairwise upper bound U",
+      "total weight"
+    ],
+    "does_not_preserve": [
+      "area made/received volumes and net flows",
+      "consistency (transitivity) among dominant directions",
+      "temporal structure"
+    ],
+    "optimum_mean": 0.5638988656505667,
+    "optimum_sd": 0.004074518261739317,
+    "optimum_max": 0.5740658335342828,
+    "fraction_ge_observed": 0.0,
+    "realizability_mean": 0.7181929336816664,
+    "realizability_p975": 0.8034674974503699,
+    "dominant_3_cycles_mean": 1738.264,
+    "budget_check": {
+      "replicates": 20,
+      "max_improvement_with_20x_budget": 1.242986448968253e-05,
+      "mean_improvement": 1.118687804063656e-06
+    },
+    "seconds": 594.2
+  },
+  "bootstrap": {
+    "replicates": 200,
+    "type": "cluster bootstrap over citing papers",
+    "optimum_fraction_mean": 0.5830013142056746,
+    "optimum_fraction_ci95": [
+      0.5798253471165284,
+      0.5874102983703778
+    ],
+    "seconds": 33.1
+  },
+  "time": {
+    "net_flow_order": {
+      "compatible_fraction_observed": 0.5638211392219402,
+      "kendall_tau": 0.5871794871794872,
+      "spearman_rho": 0.8001876172607881
+    },
+    "age_null_order": {
+      "its_own_optimum_fraction": 0.7163495176043275,
+      "compatible_fraction_observed": 0.5109693554120873,
+      "kendall_tau": 0.22820512820512823,
+      "spearman_rho": 0.33902439024390246
+    },
+    "time_excess_order": {
+      "compatible_fraction_observed": 0.5671896324986265,
+      "excess_weight_fraction_of_total": 0.05307284217956513,
+      "its_own_optimum_fraction": 0.8806241013831804,
+      "kendall_tau": 0.5923076923076923,
+      "spearman_rho": 0.7575984990619137
+    },
+    "position_vs_year_mean": {
+      "spearman_rho": 0.48536585365853663,
+      "note": "position 0 = first in the order (cited by the areas after it)"
+    }
+  },
+  "objective2_consistency": {
+    "top20_net_flow_pairs_compatible": 0.95,
+    "pairs_T200_beyond_time_null": 103,
+    "their_dominant_direction_compatible": 0.8737864077669902,
+    "their_excess_direction_compatible": 0.8446601941747572
+  },
+  "seeds": "SeedSequence([438, 7, tag]); tag 0 observed, 1 permutations, 2 null, 3 bootstrap, 4 age-null order, 5 time-excess order, 100+r checks",
+  "seconds_total": 742.7,
+  "inputs": {
+    "directed_graphml": {
+      "path": "outputs/graphml/ogbn_arxiv_directed.graphml",
+      "sha256": "51ac36337a5dc8adb7d1bfd0dd5c9ca16cf068ee11186dc794f7088d14ca7017"
+    },
+    "undirected_graphml": {
+      "path": "outputs/graphml/ogbn_arxiv_undirected.graphml",
+      "sha256": "f6eb33b80fc9e1e748790f61747965a3e91e1f479b61100c11492a1eb83b19f0"
+    },
+    "reader_version": 1,
+    "cache_file": "data/processed/f2/instances_cf7867ab838bd06e.npz"
+  },
+  "provenance": {
+    "generated_at": "2026-11-06T19:04:44+00:00",
+    "mo438_f2_version": "0.1.0",
+    "git_commit": "a121016cc7f8430b312acc663f96531b14cedef0",
+    "git_dirty": true,
+    "command": "/Users/_souzaiarley/Vscode/MO438/mo438-f1/.venv/bin/mo438-f2 ordering",
+    "environment": {
+      "python": "3.12.13",
+      "platform": "macOS-27.0.1-arm64-arm-64bit",
+      "mo438-f1": "0.1.0",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": "3.1.1",
+      "python-igraph": "1.0.0",
+      "networkx": "3.7",
+      "matplotlib": "3.11.2",
+      "PyYAML": "6.0.3",
+      "leidenalg": "0.12.0",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}

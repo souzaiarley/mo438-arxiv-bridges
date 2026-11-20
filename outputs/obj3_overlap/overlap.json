@@ -1,0 +1,96 @@
+{
+  "description": "Objective 3: neighbourhood overlap O(u,v) = |N(u)∩N(v)| / |N(u)∪N(v)| (N excluding the other endpoint) of the edges of G_u, by class.",
+  "definition": "O = c / (k_u + k_v - 2 - c), c = common neighbours; undefined (NaN, excluded) iff k_u = k_v = 1",
+  "undefined_overlap_edges": 0,
+  "point_effects": {
+    "mean_inter": 0.046031387730101174,
+    "mean_intra": 0.071452036059929,
+    "diff_mean": -0.02542064832982783,
+    "ratio_mean": 0.6442277962729186,
+    "median_inter": 0.015625,
+    "median_intra": 0.03773584905660377,
+    "diff_median": -0.022110849056603772,
+    "frac_zero_inter": 0.20621515496672863,
+    "frac_zero_intra": 0.12887762309312104,
+    "diff_frac_zero": 0.07733753187360759,
+    "cliffs_delta": -0.21362970759577324,
+    "mean_intra_degree_standardised": 0.06241784940025404,
+    "diff_mean_degree_standardised": -0.01638646167015287,
+    "frac_zero_intra_degree_standardised": 0.14212722479241738,
+    "diff_frac_zero_degree_standardised": 0.06408793017431125,
+    "standardisation_coverage": 0.9999975021481526
+  },
+  "pooled_stratified_cliffs_delta": {
+    "pooled_delta": -0.2129567549512187,
+    "strata_used": 90,
+    "strata_total": 104,
+    "inter_edges_covered": 0.9996428071858202,
+    "strata_with_negative_delta": 79
+  },
+  "sensitivity_without_top100_hub_edges": {
+    "edges_kept": 985034,
+    "edges_dropped": 172765,
+    "effects": {
+      "mean_inter": 0.055048440973863584,
+      "mean_intra": 0.08162037278571146,
+      "diff_mean": -0.02657193181184788,
+      "ratio_mean": 0.6744448609465358,
+      "median_inter": 0.02564102564102564,
+      "median_intra": 0.049723756906077346,
+      "diff_median": -0.024082731265051706,
+      "frac_zero_inter": 0.22938825755278766,
+      "frac_zero_intra": 0.14358339616191154,
+      "diff_frac_zero": 0.08580486139087612,
+      "cliffs_delta": -0.21312227403145925,
+      "mean_intra_degree_standardised": 0.07458727932592792,
+      "diff_mean_degree_standardised": -0.019538838352064332,
+      "frac_zero_intra_degree_standardised": 0.1625661909447372,
+      "diff_frac_zero_degree_standardised": 0.06682206660805046,
+      "standardisation_coverage": 1.0
+    }
+  },
+  "bootstrap": {
+    "replicates": 1000,
+    "schemes": {
+      "iid_edges": "multinomial over edges, seed 469",
+      "cluster_citing_paper": "multinomial over citing papers (each G_u edge assigned to the citing paper of its first G_d citation), seed 470"
+    },
+    "seconds": 208.8,
+    "note": "neither scheme captures the dependence among edges sharing a cited hub; see the hub sensitivity analysis"
+  },
+  "bridges_seconds": 0.6,
+  "seconds_total": 221.8,
+  "inputs": {
+    "directed_graphml": {
+      "path": "outputs/graphml/ogbn_arxiv_directed.graphml",
+      "sha256": "51ac36337a5dc8adb7d1bfd0dd5c9ca16cf068ee11186dc794f7088d14ca7017"
+    },
+    "undirected_graphml": {
+      "path": "outputs/graphml/ogbn_arxiv_undirected.graphml",
+      "sha256": "f6eb33b80fc9e1e748790f61747965a3e91e1f479b61100c11492a1eb83b19f0"
+    },
+    "reader_version": 1,
+    "cache_file": "data/processed/f2/instances_cf7867ab838bd06e.npz"
+  },
+  "provenance": {
+    "generated_at": "2026-11-06T18:28:33+00:00",
+    "mo438_f2_version": "0.1.0",
+    "git_commit": "a121016cc7f8430b312acc663f96531b14cedef0",
+    "git_dirty": true,
+    "command": "/Users/_souzaiarley/Vscode/MO438/mo438-f1/.venv/bin/mo438-f2 overlap",
+    "environment": {
+      "python": "3.12.13",
+      "platform": "macOS-27.0.1-arm64-arm-64bit",
+      "mo438-f1": "0.1.0",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": "3.1.1",
+      "python-igraph": "1.0.0",
+      "networkx": "3.7",
+      "matplotlib": "3.11.2",
+      "PyYAML": "6.0.3",
+      "leidenalg": "0.12.0",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}

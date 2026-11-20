@@ -1,0 +1,7 @@
+graph,class,num_edges,fraction_of_graph
+G_d,intra,763986,0.6550830316
+G_d,inter,402257,0.3449169684
+G_d,total,1166243,1
+G_u,intra,757455,0.6542197739
+G_u,inter,400344,0.3457802261
+G_u,total,1157799,1

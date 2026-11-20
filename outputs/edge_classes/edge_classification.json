@@ -1,0 +1,244 @@
+{
+  "description": "Intra-/inter-area classification of the edges of G_d and G_u (class = same / different primary category of the endpoints).",
+  "counts": {
+    "G_d": {
+      "graph": "G_d",
+      "num_edges": 1166243,
+      "intra": 763986,
+      "inter": 402257,
+      "inter_fraction": 0.3449169684191031
+    },
+    "G_u": {
+      "graph": "G_u",
+      "num_edges": 1157799,
+      "intra": 757455,
+      "inter": 400344,
+      "inter_fraction": 0.34578022610142173
+    }
+  },
+  "reciprocal_decomposition": {
+    "intra": {
+      "G_d_edges": 763986,
+      "G_u_edges": 757455,
+      "difference": 6531,
+      "self_loops_removed": 0,
+      "extra_merged_edges": 6531,
+      "reciprocal_pairs_merged": 6531,
+      "duplicate_citations_merged": 0,
+      "G_d_edges_in_reciprocal_pairs": 13062
+    },
+    "inter": {
+      "G_d_edges": 402257,
+      "G_u_edges": 400344,
+      "difference": 1913,
+      "self_loops_removed": 0,
+      "extra_merged_edges": 1913,
+      "reciprocal_pairs_merged": 1913,
+      "duplicate_citations_merged": 0,
+      "G_d_edges_in_reciprocal_pairs": 3826
+    },
+    "total_reciprocal_pairs": 8444
+  },
+  "G_u_node_composition": {
+    "num_nodes": 169343,
+    "isolated": 0,
+    "only_intra_edges": 48014,
+    "only_inter_edges": 20799,
+    "both_classes": 100530
+  },
+  "largest_category": {
+    "name": "cs.CV",
+    "num_papers": 27321,
+    "fraction_of_nodes": 0.1613352781042027,
+    "note": "upper bound of the LCC of G_u once every inter-area edge is removed"
+  },
+  "checks": [
+    {
+      "check": "G_d intra + inter = m_d",
+      "observed": 1166243,
+      "expected": 1166243,
+      "passed": true,
+      "reference": "definition"
+    },
+    {
+      "check": "G_u intra + inter = m_u",
+      "observed": 1157799,
+      "expected": 1157799,
+      "passed": true,
+      "reference": "definition"
+    },
+    {
+      "check": "G_d intra = trace of recomputed category matrix",
+      "observed": 763986,
+      "expected": 763986,
+      "passed": true,
+      "reference": "recount (bincount of label pairs)"
+    },
+    {
+      "check": "G_d intra = trace(F1 area_citation_matrix.csv)",
+      "observed": 763986,
+      "expected": 763986,
+      "passed": true,
+      "reference": "F1 output"
+    },
+    {
+      "check": "G_d inter = off-diagonal sum of F1 area_citation_matrix.csv",
+      "observed": 402257,
+      "expected": 402257,
+      "passed": true,
+      "reference": "F1 output"
+    },
+    {
+      "check": "recomputed category matrix = F1 area_citation_matrix.csv",
+      "observed": true,
+      "expected": true,
+      "passed": true,
+      "reference": "F1 output"
+    },
+    {
+      "check": "intra: |G_d| - |G_u| = self-loops + extra merged edges",
+      "observed": 6531,
+      "expected": 6531,
+      "passed": true,
+      "reference": "G_d -> G_u conversion"
+    },
+    {
+      "check": "inter: |G_d| - |G_u| = self-loops + extra merged edges",
+      "observed": 1913,
+      "expected": 1913,
+      "passed": true,
+      "reference": "G_d -> G_u conversion"
+    },
+    {
+      "check": "reciprocal pairs in G_u = distinct reciprocated G_d citations / 2",
+      "observed": 8444,
+      "expected": 8444,
+      "passed": true,
+      "reference": "G_d reverse-edge lookup"
+    },
+    {
+      "check": "sum of G_u multiplicities = non-loop edges of G_d",
+      "observed": 1166243,
+      "expected": 1166243,
+      "passed": true,
+      "reference": "G_d -> G_u conversion"
+    },
+    {
+      "check": "every non-loop G_d citation maps to a G_u edge",
+      "observed": true,
+      "expected": true,
+      "passed": true,
+      "reference": "G_d -> G_u conversion"
+    },
+    {
+      "check": "every G_d citation has the class of its G_u edge",
+      "observed": true,
+      "expected": true,
+      "passed": true,
+      "reference": "symmetry of the definition"
+    },
+    {
+      "check": "G_d intra = audit 2026-11-06",
+      "observed": 763986,
+      "expected": 763986,
+      "passed": true,
+      "reference": "docs/auditoria_f2.md"
+    },
+    {
+      "check": "G_d inter = audit 2026-11-06",
+      "observed": 402257,
+      "expected": 402257,
+      "passed": true,
+      "reference": "docs/auditoria_f2.md"
+    },
+    {
+      "check": "G_u intra = audit 2026-11-06",
+      "observed": 757455,
+      "expected": 757455,
+      "passed": true,
+      "reference": "docs/auditoria_f2.md"
+    },
+    {
+      "check": "G_u inter = audit 2026-11-06",
+      "observed": 400344,
+      "expected": 400344,
+      "passed": true,
+      "reference": "docs/auditoria_f2.md"
+    },
+    {
+      "check": "reciprocal intra pairs = audit 2026-11-06",
+      "observed": 6531,
+      "expected": 6531,
+      "passed": true,
+      "reference": "docs/auditoria_f2.md"
+    },
+    {
+      "check": "reciprocal inter pairs = audit 2026-11-06",
+      "observed": 1913,
+      "expected": 1913,
+      "passed": true,
+      "reference": "docs/auditoria_f2.md"
+    }
+  ],
+  "all_checks_passed": true,
+  "files": {
+    "edge_table_G_d": {
+      "path": "data/processed/f2/edges_gd.npz",
+      "content_sha256": "dd1cf5e9da1f64363d4fd7d89b8ef5fb3eab14f20f4c2deb7b833f02c2b3d637",
+      "file_sha256": "703db25fc4a3e592f492862fbccff691b49d054e71d5f52bdd1049fca62c615f",
+      "versioned": false,
+      "note": "content_sha256 hashes the arrays only; file_sha256 also depends on the embedded metadata (input paths, versions) and on the npz encoding"
+    },
+    "edge_table_G_u": {
+      "path": "data/processed/f2/edges_gu.npz",
+      "content_sha256": "a593201c0b194a9d945d583e1fe544171758ae23f9678fab83e39782e44d37d6",
+      "file_sha256": "a7eb975977fd091caeb039b56f7c20722c30b6936b733dda151f7582db90820e",
+      "versioned": false,
+      "note": "content_sha256 hashes the arrays only; file_sha256 also depends on the embedded metadata (input paths, versions) and on the npz encoding"
+    },
+    "edge_classes_csv": "outputs/f2/phase0/edge_classes.csv",
+    "edge_classes_by_category_csv": "outputs/f2/phase0/edge_classes_by_category.csv"
+  },
+  "inputs": {
+    "directed_graphml": {
+      "path": "outputs/graphml/ogbn_arxiv_directed.graphml",
+      "sha256": "51ac36337a5dc8adb7d1bfd0dd5c9ca16cf068ee11186dc794f7088d14ca7017"
+    },
+    "undirected_graphml": {
+      "path": "outputs/graphml/ogbn_arxiv_undirected.graphml",
+      "sha256": "f6eb33b80fc9e1e748790f61747965a3e91e1f479b61100c11492a1eb83b19f0"
+    },
+    "reader_version": 1,
+    "cache_file": "data/processed/f2/instances_cf7867ab838bd06e.npz"
+  },
+  "conversion": {
+    "num_nodes": 169343,
+    "num_directed_edges": 1166243,
+    "num_directed_self_loops": 0,
+    "num_duplicate_directed_edges": 0,
+    "num_reciprocal_pairs": 8444,
+    "num_undirected_edges": 1157799,
+    "self_loops_removed": true
+  },
+  "provenance": {
+    "generated_at": "2026-11-06T17:23:12+00:00",
+    "mo438_f2_version": "0.1.0",
+    "git_commit": "a121016cc7f8430b312acc663f96531b14cedef0",
+    "git_dirty": true,
+    "command": "/Users/_souzaiarley/Vscode/MO438/mo438-f1/.venv/bin/mo438-f2 classify-edges",
+    "environment": {
+      "python": "3.12.13",
+      "platform": "macOS-27.0.1-arm64-arm-64bit",
+      "mo438-f1": "0.1.0",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": "3.1.1",
+      "python-igraph": "1.0.0",
+      "networkx": "3.7",
+      "matplotlib": "3.11.2",
+      "PyYAML": "6.0.3",
+      "leidenalg": "0.12.0",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}

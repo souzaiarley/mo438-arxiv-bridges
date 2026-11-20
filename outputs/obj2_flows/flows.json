@@ -1,0 +1,119 @@
+{
+  "description": "Objective 2: directed citation flows between the 40 primary categories of G_d (M[i,j] = citations from area i to area j).",
+  "matrix_matches_f1_area_citation_matrix": true,
+  "totals": {
+    "citations": 1166243,
+    "intra": 763986,
+    "inter": 402257,
+    "pairs_with_citations": 722,
+    "share_of_inter_citations_in_top10_pairs": 0.5192103555687035
+  },
+  "null_models": {
+    "strength": "E_ij = out_i in_j / M_tot (area citing and cited volumes kept)",
+    "time": "same, stratified by (citing year, cited year) of each citation",
+    "age": "inter-area citations only: E_ij = sum_y O[i,y] P[j,y]/(P[.,y]-P[i,y]), j != i; each area keeps its inter-area citing volume and cited-age profile, the cited area is drawn among the other areas by its share of the papers of each year",
+    "note": "strength and time nulls preserve each area's made/received volumes and hence its net inter flow; they are used for pairwise direction only",
+    "pair_test": "LOR = logit((M_ij+.5)/(T+1)) - logit((T e_ij+.5)/(T+1)), e_ij = E_ij/(E_ij+E_ji)"
+  },
+  "bootstrap": {
+    "type": "cluster bootstrap over citing papers (multinomial weights)",
+    "replicates": 1000,
+    "seed": "SeedSequence([438, 2, 0])",
+    "intervals": "percentile 2.5-97.5 %",
+    "seconds": 39.6
+  },
+  "pairs_with_significant_direction": {
+    "pairs_total_ge_100": {
+      "pairs": 245,
+      "direction_differs_from_50_50": 152,
+      "direction_beyond_strength_null": 133,
+      "direction_beyond_time_null": 125,
+      "citations_in_these_pairs": 390598
+    },
+    "pairs_total_ge_1000": {
+      "pairs": 58,
+      "direction_differs_from_50_50": 44,
+      "direction_beyond_strength_null": 44,
+      "direction_beyond_time_null": 42,
+      "citations_in_these_pairs": 325478
+    }
+  },
+  "spearman": {
+    "nnf_vs_year_mean": {
+      "rho": -0.5469043151969981,
+      "p_permutation": 0.0001,
+      "n": 40,
+      "permutations": 10000
+    },
+    "nnf_vs_nnf_expected_time": {
+      "rho": 0.9242026266416512,
+      "p_permutation": 0.0,
+      "n": 40,
+      "permutations": 10000
+    },
+    "nnf_excess_time_vs_year_mean": {
+      "rho": -0.41951219512195126,
+      "p_permutation": 0.0062,
+      "n": 40,
+      "permutations": 10000
+    },
+    "nnf_vs_num_papers": {
+      "rho": 0.04859287054409006,
+      "p_permutation": 0.775,
+      "n": 40,
+      "permutations": 10000
+    },
+    "nnf_vs_nnf_age": {
+      "rho": 0.4112570356472796,
+      "p_permutation": 0.0091,
+      "n": 40,
+      "permutations": 10000
+    },
+    "nnf_minus_nnf_age_vs_year_mean": {
+      "rho": 0.35984990619136964,
+      "p_permutation": 0.02,
+      "n": 40,
+      "permutations": 10000
+    },
+    "nnf_vs_inter_out_per_paper": {
+      "rho": -0.35891181988742976,
+      "p_permutation": 0.0241,
+      "n": 40,
+      "permutations": 10000
+    }
+  },
+  "seconds_total": 41.4,
+  "inputs": {
+    "directed_graphml": {
+      "path": "outputs/graphml/ogbn_arxiv_directed.graphml",
+      "sha256": "51ac36337a5dc8adb7d1bfd0dd5c9ca16cf068ee11186dc794f7088d14ca7017"
+    },
+    "undirected_graphml": {
+      "path": "outputs/graphml/ogbn_arxiv_undirected.graphml",
+      "sha256": "f6eb33b80fc9e1e748790f61747965a3e91e1f479b61100c11492a1eb83b19f0"
+    },
+    "reader_version": 1,
+    "cache_file": "data/processed/f2/instances_cf7867ab838bd06e.npz"
+  },
+  "provenance": {
+    "generated_at": "2026-11-06T18:23:07+00:00",
+    "mo438_f2_version": "0.1.0",
+    "git_commit": "a121016cc7f8430b312acc663f96531b14cedef0",
+    "git_dirty": true,
+    "command": "/Users/_souzaiarley/Vscode/MO438/mo438-f1/.venv/bin/mo438-f2 flows",
+    "environment": {
+      "python": "3.12.13",
+      "platform": "macOS-27.0.1-arm64-arm-64bit",
+      "mo438-f1": "0.1.0",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": "3.1.1",
+      "python-igraph": "1.0.0",
+      "networkx": "3.7",
+      "matplotlib": "3.11.2",
+      "PyYAML": "6.0.3",
+      "leidenalg": "0.12.0",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}

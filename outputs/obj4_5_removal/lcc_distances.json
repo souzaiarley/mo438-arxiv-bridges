@@ -1,0 +1,59 @@
+{
+  "description": "Sampled average shortest-path length inside the LCC at selected removal states (complementary to S(q)); same removal orders/seeds as the main experiment.",
+  "estimator": "mean over uniformly sampled LCC sources of the per-source mean distance (unbiased for the ordered-pair mean); SE with finite-population correction; CI = estimate +/- 1.96 SE",
+  "q_points": [
+    0.05000004318538883,
+    0.10000008637077766,
+    0.20000017274155532,
+    0.30000025911233297,
+    0.33000028502356626,
+    0.34232280387182923,
+    0.34543474299079546
+  ],
+  "k_points": [
+    57890,
+    115780,
+    231560,
+    347340,
+    382074,
+    396341,
+    399944
+  ],
+  "replicates_per_strategy": 10,
+  "num_sources": 256,
+  "seeds": "sources: SeedSequence([438, 77, strategy_code, replicate, k]); removal orders: as in the main experiment",
+  "validation_on_intact_graph": {
+    "exact_intact_average_distance": 5.750051843728483,
+    "samples": 20,
+    "num_sources": 256,
+    "mean_of_estimates": 5.747867560773833,
+    "bias": -0.0021842829546496745,
+    "sd_of_estimates": 0.08642435707849933,
+    "mean_reported_se": 0.08154320027683508,
+    "ci95_coverage": 0.95,
+    "max_abs_error": 0.20391081975776082
+  },
+  "seconds": 458.0,
+  "n_jobs": 8,
+  "provenance": {
+    "generated_at": "2026-11-06T18:22:06+00:00",
+    "mo438_f2_version": "0.1.0",
+    "git_commit": "a121016cc7f8430b312acc663f96531b14cedef0",
+    "git_dirty": true,
+    "command": "/Users/_souzaiarley/Vscode/MO438/mo438-f1/.venv/bin/mo438-f2 removal-distances --n-jobs 8",
+    "environment": {
+      "python": "3.12.13",
+      "platform": "macOS-27.0.1-arm64-arm-64bit",
+      "mo438-f1": "0.1.0",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": "3.1.1",
+      "python-igraph": "1.0.0",
+      "networkx": "3.7",
+      "matplotlib": "3.11.2",
+      "PyYAML": "6.0.3",
+      "leidenalg": "0.12.0",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "description": "Integration of objectives 6-7 with objectives 2-5 (descriptive associations).",
+  "communities": {
+    "pairs": 722,
+    "comembership_vs_citation_OE": {
+      "rho": 0.7587776861843903,
+      "p_permutation": 0.0,
+      "n": 722,
+      "permutations": 2000
+    },
+    "comembership_vs_citations_total": {
+      "rho": 0.42680683867805985,
+      "p_permutation": 0.0,
+      "n": 722,
+      "permutations": 2000
+    },
+    "spread_vs_inter_share_of_incident_edges": {
+      "rho": 0.725891181988743,
+      "p_permutation": 0.0,
+      "n": 40,
+      "permutations": 10000
+    },
+    "spread_vs_largest_intra_component_fraction": {
+      "rho": -0.6170731707317073,
+      "p_permutation": 0.0,
+      "n": 40,
+      "permutations": 10000
+    },
+    "spread_vs_num_papers": {
+      "rho": -0.31444652908067544,
+      "p_permutation": 0.0501,
+      "n": 40,
+      "permutations": 10000
+    },
+    "spread_vs_nnf": {
+      "rho": -0.07842401500938087,
+      "p_permutation": 0.6314,
+      "n": 40,
+      "permutations": 10000
+    },
+    "spread_vs_year_mean": {
+      "rho": 0.14834623912720565,
+      "p_permutation": 0.3627,
+      "n": 40,
+      "permutations": 10000
+    },
+    "spread_vs_inter_share_given_num_papers": 0.7221761717561145
+  },
+  "ordering": {
+    "position_vs_nnf": {
+      "rho": -0.8741088180112572,
+      "p_permutation": 0.0,
+      "n": 40,
+      "permutations": 10000
+    },
+    "position_vs_nnf_age": {
+      "rho": -0.2849906191369606,
+      "p_permutation": 0.0701,
+      "n": 40,
+      "permutations": 10000
+    },
+    "position_vs_inter_in_OE_age": {
+      "rho": -0.2960600375234522,
+      "p_permutation": 0.0619,
+      "n": 40,
+      "permutations": 10000
+    },
+    "position_vs_year_mean": {
+      "rho": 0.48397843226952986,
+      "p_permutation": 0.002,
+      "n": 40,
+      "permutations": 10000
+    },
+    "position_vs_num_papers": {
+      "rho": -0.10412757973733584,
+      "p_permutation": 0.5244,
+      "n": 40,
+      "permutations": 10000
+    },
+    "position_vs_largest_intra_component_fraction": {
+      "rho": -0.31538461538461543,
+      "p_permutation": 0.0482,
+      "n": 40,
+      "permutations": 10000
+    },
+    "position_vs_year_given_nnf": 0.019102365992072108
+  },
+  "provenance": {
+    "generated_at": "2026-11-06T19:08:03+00:00",
+    "mo438_f2_version": "0.1.0",
+    "git_commit": "a121016cc7f8430b312acc663f96531b14cedef0",
+    "git_dirty": true,
+    "command": "/Users/_souzaiarley/Vscode/MO438/mo438-f1/.venv/bin/mo438-f2 integrate",
+    "environment": {
+      "python": "3.12.13",
+      "platform": "macOS-27.0.1-arm64-arm-64bit",
+      "mo438-f1": "0.1.0",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": "3.1.1",
+      "python-igraph": "1.0.0",
+      "networkx": "3.7",
+      "matplotlib": "3.11.2",
+      "PyYAML": "6.0.3",
+      "leidenalg": "0.12.0",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}

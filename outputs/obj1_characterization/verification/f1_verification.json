@@ -1,0 +1,513 @@
+{
+  "description": "Re-check of the F1 metrics. kind = recomputed_independently (numpy/scipy code path), consistency (F1 output checked, value not recomputed) or f1_code_rerun (F1 code re-executed; regression only).",
+  "rows": [
+    {
+      "metric": "num_nodes",
+      "value": 169343,
+      "f1_reported": 169343,
+      "f1_summary_json": 169343,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "num_edges",
+      "value": 1157799,
+      "f1_reported": 1157799,
+      "f1_summary_json": 1157799,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "mean_degree",
+      "value": 13.674010735607613,
+      "f1_reported": 13.674,
+      "f1_summary_json": 13.674010735607613,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "density",
+      "value": 8.074789913670332e-05,
+      "f1_reported": 8.07479e-05,
+      "f1_summary_json": 8.074789913670332e-05,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "average_local_clustering",
+      "value": 0.25745357344617203,
+      "f1_reported": 0.257454,
+      "f1_summary_json": 0.25745357344617203,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "average_local_clustering_all_nodes",
+      "value": 0.22612914062470948,
+      "f1_reported": null,
+      "f1_summary_json": 0.22612914062470948,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "transitivity",
+      "value": 0.01620149151351999,
+      "f1_reported": 0.016201,
+      "f1_summary_json": 0.01620149151351999,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "num_triangles",
+      "value": 2233524,
+      "f1_reported": null,
+      "f1_summary_json": 2233524,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "num_connected_triples",
+      "value": 413577478,
+      "f1_reported": null,
+      "f1_summary_json": 413577478,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "num_connected_components",
+      "value": 1,
+      "f1_reported": 1,
+      "f1_summary_json": 1,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "num_nodes_degree_lt_2",
+      "value": 20604,
+      "f1_reported": 20604,
+      "f1_summary_json": 20604,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "num_isolated_nodes",
+      "value": 0,
+      "f1_reported": null,
+      "f1_summary_json": 0,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "degree_max",
+      "value": 13161,
+      "f1_reported": null,
+      "f1_summary_json": 13161,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "G_d.num_edges",
+      "value": 1166243,
+      "f1_reported": null,
+      "f1_summary_json": 1166243,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "G_d.reciprocity",
+      "value": 0.014480687129526179,
+      "f1_reported": null,
+      "f1_summary_json": 0.014480687129526179,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "G_d.in_degree_max",
+      "value": 13155,
+      "f1_reported": null,
+      "f1_summary_json": 13155,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "G_d.out_degree_max",
+      "value": 436,
+      "f1_reported": null,
+      "f1_summary_json": 436,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "G_d.num_nodes_in_degree_0",
+      "value": 62006,
+      "f1_reported": null,
+      "f1_summary_json": 62006,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "G_d.num_nodes_out_degree_0",
+      "value": 17440,
+      "f1_reported": null,
+      "f1_summary_json": 17440,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "G_d.density",
+      "value": 4.066840277668502e-05,
+      "f1_reported": null,
+      "f1_summary_json": 4.066840277668502e-05,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "G_d.num_weakly_connected_components",
+      "value": 1,
+      "f1_reported": null,
+      "f1_summary_json": 1,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "G_d.num_strongly_connected_components",
+      "value": 141223,
+      "f1_reported": null,
+      "f1_summary_json": 141223,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "G_d.num_nontrivial_sccs",
+      "value": 2810,
+      "f1_reported": null,
+      "f1_summary_json": 2810,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "G_d.num_nodes_in_nontrivial_sccs",
+      "value": 30930,
+      "f1_reported": null,
+      "f1_summary_json": 30930,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "G_d.largest_scc_size",
+      "value": 23164,
+      "f1_reported": null,
+      "f1_summary_json": 23164,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "conversion.reciprocal_pairs",
+      "value": 8444,
+      "f1_reported": null,
+      "f1_summary_json": 8444,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "conversion.self_loops",
+      "value": 0,
+      "f1_reported": null,
+      "f1_summary_json": 0,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "conversion.duplicates",
+      "value": 0,
+      "f1_reported": null,
+      "f1_summary_json": 0,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "local_clustering.csv: degree per node",
+      "value": true,
+      "f1_reported": null,
+      "f1_summary_json": null,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "local_clustering.csv: triangles per node",
+      "value": true,
+      "f1_reported": null,
+      "f1_summary_json": null,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "local_clustering.csv: max |C_i difference| (CSV has 6 significant digits)",
+      "value": 4.997131382578068e-07,
+      "f1_reported": null,
+      "f1_summary_json": null,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "degree_distribution_undirected.csv",
+      "value": true,
+      "f1_reported": null,
+      "f1_summary_json": null,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "area_citation_matrix.csv",
+      "value": true,
+      "f1_reported": null,
+      "f1_summary_json": null,
+      "kind": "recomputed_independently",
+      "method": "numpy/scipy (mo438_f2.verification), no igraph, no mo438_f1 metrics",
+      "passed": true
+    },
+    {
+      "metric": "category names / label order",
+      "value": true,
+      "f1_reported": null,
+      "f1_summary_json": null,
+      "kind": "recomputed_independently",
+      "method": "GraphML vs summary.json",
+      "passed": true
+    },
+    {
+      "metric": "distance_distribution.csv internal consistency",
+      "value": true,
+      "f1_reported": null,
+      "f1_summary_json": null,
+      "kind": "consistency",
+      "method": "sum = n(n-1), bin 1 = 2m, contiguous bins",
+      "passed": true
+    },
+    {
+      "metric": "average_distance",
+      "value": 5.750051843728483,
+      "f1_reported": 5.750052,
+      "f1_summary_json": 5.750051843728483,
+      "kind": "consistency",
+      "method": "mean of the F1 histogram (not recomputed)",
+      "passed": true
+    },
+    {
+      "metric": "diameter",
+      "value": 25,
+      "f1_reported": 25,
+      "f1_summary_json": 25,
+      "kind": "recomputed_independently",
+      "method": "iFUB, 386 scipy BFS, root 12070 (ecc 16), certificate pair (25184, 145643)",
+      "passed": true
+    },
+    {
+      "metric": "average_distance",
+      "value": 5.750051843728483,
+      "f1_reported": 5.750052,
+      "f1_summary_json": 5.750051843728483,
+      "kind": "recomputed_independently",
+      "method": "one scipy BFS per node (independent of the F1 MS-BFS engine)",
+      "passed": true
+    },
+    {
+      "metric": "distance_distribution.csv equals independent histogram (all bins)",
+      "value": true,
+      "f1_reported": null,
+      "f1_summary_json": null,
+      "kind": "recomputed_independently",
+      "method": "one scipy BFS per node (independent of the F1 MS-BFS engine)",
+      "passed": true
+    },
+    {
+      "metric": "diameter",
+      "value": 25,
+      "f1_reported": 25,
+      "f1_summary_json": 25,
+      "kind": "recomputed_independently",
+      "method": "one scipy BFS per node (independent of the F1 MS-BFS engine)",
+      "passed": true
+    },
+    {
+      "metric": "mean_degree",
+      "value": 13.674010735607613,
+      "f1_reported": 13.674,
+      "f1_summary_json": 13.674010735607613,
+      "kind": "f1_code_rerun",
+      "method": "mo438_f1.metrics (igraph) re-run in the uv environment",
+      "passed": true
+    },
+    {
+      "metric": "density",
+      "value": 8.074789913670332e-05,
+      "f1_reported": 8.07479e-05,
+      "f1_summary_json": 8.074789913670332e-05,
+      "kind": "f1_code_rerun",
+      "method": "mo438_f1.metrics (igraph) re-run in the uv environment",
+      "passed": true
+    },
+    {
+      "metric": "average_local_clustering",
+      "value": 0.25745357344617203,
+      "f1_reported": 0.257454,
+      "f1_summary_json": 0.25745357344617203,
+      "kind": "f1_code_rerun",
+      "method": "mo438_f1.metrics (igraph) re-run in the uv environment",
+      "passed": true
+    },
+    {
+      "metric": "transitivity",
+      "value": 0.01620149151351999,
+      "f1_reported": 0.016201,
+      "f1_summary_json": 0.01620149151351999,
+      "kind": "f1_code_rerun",
+      "method": "mo438_f1.metrics (igraph) re-run in the uv environment",
+      "passed": true
+    },
+    {
+      "metric": "num_triangles",
+      "value": 2233524,
+      "f1_reported": null,
+      "f1_summary_json": 2233524,
+      "kind": "f1_code_rerun",
+      "method": "mo438_f1.metrics (igraph) re-run in the uv environment",
+      "passed": true
+    },
+    {
+      "metric": "num_connected_components",
+      "value": 1,
+      "f1_reported": 1,
+      "f1_summary_json": 1,
+      "kind": "f1_code_rerun",
+      "method": "mo438_f1.metrics (igraph) re-run in the uv environment",
+      "passed": true
+    },
+    {
+      "metric": "G_d.reciprocity",
+      "value": 0.014480687129526179,
+      "f1_reported": null,
+      "f1_summary_json": 0.014480687129526179,
+      "kind": "f1_code_rerun",
+      "method": "mo438_f1.metrics (igraph) re-run in the uv environment",
+      "passed": true
+    },
+    {
+      "metric": "G_d.num_strongly_connected_components",
+      "value": 141223,
+      "f1_reported": null,
+      "f1_summary_json": 141223,
+      "kind": "f1_code_rerun",
+      "method": "mo438_f1.metrics (igraph) re-run in the uv environment",
+      "passed": true
+    },
+    {
+      "metric": "G_d.largest_scc_size",
+      "value": 23164,
+      "f1_reported": null,
+      "f1_summary_json": 23164,
+      "kind": "f1_code_rerun",
+      "method": "mo438_f1.metrics (igraph) re-run in the uv environment",
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "diameter_ifub": {
+    "diameter": 25,
+    "witness_pair": [
+      25184,
+      145643
+    ],
+    "root": 12070,
+    "root_eccentricity": 16,
+    "stopped_at_level": 13,
+    "num_bfs": 386,
+    "num_nodes": 169343,
+    "method": "iFUB (4-sweep root) with scipy BFS; exact"
+  },
+  "distance_histogram_checks": {
+    "sum_equals_n(n-1)": true,
+    "distance_1_equals_2m": true,
+    "distances_contiguous_from_1": true,
+    "average_distance": 5.750051843728483,
+    "max_distance": 25
+  },
+  "orientation_by_year": {
+    "frac_citing_newer_than_cited": 0.8714513184645053,
+    "frac_same_year": 0.11062531565034045,
+    "frac_citing_older_than_cited": 0.017923365885154294
+  },
+  "inputs": {
+    "directed_graphml": {
+      "path": "outputs/graphml/ogbn_arxiv_directed.graphml",
+      "sha256": "51ac36337a5dc8adb7d1bfd0dd5c9ca16cf068ee11186dc794f7088d14ca7017"
+    },
+    "undirected_graphml": {
+      "path": "outputs/graphml/ogbn_arxiv_undirected.graphml",
+      "sha256": "f6eb33b80fc9e1e748790f61747965a3e91e1f479b61100c11492a1eb83b19f0"
+    },
+    "reader_version": 1,
+    "cache_file": "data/processed/f2/instances_cf7867ab838bd06e.npz"
+  },
+  "provenance": {
+    "generated_at": "2026-11-06T17:33:02+00:00",
+    "mo438_f2_version": "0.1.0",
+    "git_commit": "a121016cc7f8430b312acc663f96531b14cedef0",
+    "git_dirty": true,
+    "command": "/Users/_souzaiarley/Vscode/MO438/mo438-f1/.venv/bin/mo438-f2 verify-f1 --all-pairs",
+    "environment": {
+      "python": "3.12.13",
+      "platform": "macOS-27.0.1-arm64-arm-64bit",
+      "mo438-f1": "0.1.0",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": "3.1.1",
+      "python-igraph": "1.0.0",
+      "networkx": "3.7",
+      "matplotlib": "3.11.2",
+      "PyYAML": "6.0.3",
+      "leidenalg": "0.12.0",
+      "scikit-learn": "1.9.1"
+    }
+  },
+  "all_pairs": {
+    "num_ordered_pairs": 28676882306,
+    "average_distance": 5.750051843728483,
+    "diameter": 25,
+    "elapsed_seconds": 1196.025673416967,
+    "n_jobs": 10,
+    "method": "one scipy BFS per node (independent of the F1 MS-BFS engine)"
+  }
+}

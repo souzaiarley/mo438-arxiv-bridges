@@ -17,8 +17,8 @@ manter a rede conectada?
 ## Dados
 
 A rede é a [`ogbn-arxiv`](https://ogb.stanford.edu/docs/nodeprop/#ogbn-arxiv), do Open Graph
-Benchmark:
-* 169.343 artigos de Ciência da Computação;
+Benchmark (Hu et al., 2020), derivada do Microsoft Academic Graph:
+* 169.343 artigos de Ciência da Computação, publicados entre 1971 e 2020;
 * 1.166.243 citações, das quais 65,5% são intra-área;
 * 40 categorias, uma por artigo.
 
